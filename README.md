@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Note
+
+[How to configure Vue CLI 4 with ESLint + Airbnb rules + TypeScript + Stylelint for SCSS, in VS Code editor with autofix on save?](https://stackoverflow.com/questions/60187885)
