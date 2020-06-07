@@ -30,4 +30,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Note
 
-[How to configure Vue CLI 4 with ESLint + Airbnb rules + TypeScript + Stylelint for SCSS, in VS Code editor with autofix on save?](https://stackoverflow.com/questions/60187885)
+- [How to configure Vue CLI 4 with ESLint + Airbnb rules + TypeScript + Stylelint for SCSS, in VS Code editor with autofix on save?](https://stackoverflow.com/questions/60187885)
+- [Vue Router](https://router.vuejs.org/zh/)
+- [Vuex](https://vuex.vuejs.org/zh/guide/)
