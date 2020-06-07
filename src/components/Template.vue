@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="template">
     <span v-bind:title="message">
       滑鼠在這裡停幾秒
     </span>
@@ -55,14 +55,6 @@
     <br>
     <!-- shorthand -->
     <a @click="switchSeen"> shorthand </a>
-    <h2>Computed Properties and Watchers</h2>
-    複雜邏輯時使用
-    <h3>Basic Example</h3>
-    {{ reversedMessage }}
-    <h3>Computed Caching vs Methods</h3>
-    <h3>Computed vs Watched Property</h3>
-    <h3>Computed Setter</h3>
-    <h3>Watchers</h3>
   </div>
 </template>
 

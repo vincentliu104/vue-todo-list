@@ -3,12 +3,14 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <Template msg="Welcome to Your Vue.js App"/>
+    <ComputedProperties msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
 import Template from './components/Template.vue';
+import ComputedProperties from './components/ComputedProperties.vue';
 
 // arrow function 沒有 this 所以避免使用
 export default {
@@ -17,6 +19,7 @@ export default {
   components: {
     HelloWorld,
     Template,
+    ComputedProperties,
   },
 };
 </script>
