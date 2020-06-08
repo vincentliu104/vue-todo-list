@@ -4,6 +4,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <Template msg="Welcome to Your Vue.js App"/>
     <ComputedProperties msg="Welcome to Your Vue.js App"/>
+    <ClassAndStyleBinding />
   </div>
 </template>
 
@@ -11,6 +12,7 @@
 import HelloWorld from './components/HelloWorld.vue';
 import Template from './components/Template.vue';
 import ComputedProperties from './components/ComputedProperties.vue';
+import ClassAndStyleBinding from './components/ClassAndStyleBinding.vue';
 
 // arrow function 沒有 this 所以避免使用
 export default {
@@ -20,6 +22,7 @@ export default {
     HelloWorld,
     Template,
     ComputedProperties,
+    ClassAndStyleBinding,
   },
 };
 </script>
