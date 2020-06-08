@@ -7,6 +7,7 @@
     <ClassAndStyleBinding />
     <ConditionalRendering />
     <List />
+    <EventHandling />
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import ComputedProperties from './components/ComputedProperties.vue';
 import ClassAndStyleBinding from './components/ClassAndStyleBinding.vue';
 import ConditionalRendering from './components/ConditionalRendering.vue';
 import List from './components/List.vue';
+import EventHandling from './components/EventHandling.vue';
 
 // arrow function 沒有 this 所以避免使用
 export default {
@@ -29,6 +31,7 @@ export default {
     ClassAndStyleBinding,
     ConditionalRendering,
     List,
+    EventHandling,
   },
 };
 </script>
