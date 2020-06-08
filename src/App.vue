@@ -5,6 +5,8 @@
     <Template msg="Welcome to Your Vue.js App"/>
     <ComputedProperties msg="Welcome to Your Vue.js App"/>
     <ClassAndStyleBinding />
+    <ConditionalRendering />
+    <List />
   </div>
 </template>
 
@@ -13,6 +15,8 @@ import HelloWorld from './components/HelloWorld.vue';
 import Template from './components/Template.vue';
 import ComputedProperties from './components/ComputedProperties.vue';
 import ClassAndStyleBinding from './components/ClassAndStyleBinding.vue';
+import ConditionalRendering from './components/ConditionalRendering.vue';
+import List from './components/List.vue';
 
 // arrow function 沒有 this 所以避免使用
 export default {
@@ -23,6 +27,8 @@ export default {
     Template,
     ComputedProperties,
     ClassAndStyleBinding,
+    ConditionalRendering,
+    List,
   },
 };
 </script>
