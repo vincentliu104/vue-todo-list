@@ -16,7 +16,7 @@
     <BlogPost
       v-for="post in posts"
       v-bind:key="post.id"
-      v-bind:title="post.title"
+      v-bind:post="post"
     ></BlogPost>
   </div>
 </template>
