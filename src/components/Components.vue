@@ -13,11 +13,15 @@
     <p>global or local</p>
     <h3>Passing Data to Child Components with Props</h3>
     {{ title }}
-    <BlogPost
-      v-for="post in posts"
-      v-bind:key="post.id"
-      v-bind:post="post"
-    ></BlogPost>
+    <div :style="{ fontSize: postFontSize + 'em' }">
+      <BlogPost
+        v-for="post in posts"
+        v-bind:key="post.id"
+        v-bind:post="post"
+        v-bind:postFontSize="postFontSize"
+        v-on:enlarge-text="postFontSize += 0.1"
+      ></BlogPost>
+    </div>
   </div>
 </template>
 
@@ -39,6 +43,7 @@ export default {
         { id: 2, title: 'Blogging with Vue', content: 'blablabla' },
         { id: 3, title: 'Why Vue is so fun', content: 'blablabla' },
       ],
+      postFontSize: 1,
     };
   },
 };

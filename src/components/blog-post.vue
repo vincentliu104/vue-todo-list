@@ -1,6 +1,9 @@
 <template>
   <div id="class">
     <font color="red">{{ post.title }}</font>
+    <button v-on:click="$emit('enlarge-text')">
+      Enlarge text
+    </button>
     <div v-html="post.content"></div>
   </div>
 </template>
