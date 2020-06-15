@@ -9,6 +9,7 @@
     <List />
     <EventHandling />
     <FormInputBindings />
+    <Components title="My Component" />
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import ConditionalRendering from './components/ConditionalRendering.vue';
 import List from './components/List.vue';
 import EventHandling from './components/EventHandling.vue';
 import FormInputBindings from './components/FormInputBindings.vue';
+import Components from './components/Components.vue';
 
 // arrow function 沒有 this 所以避免使用
 export default {
@@ -35,6 +37,7 @@ export default {
     List,
     EventHandling,
     FormInputBindings,
+    Components,
   },
 };
 </script>
