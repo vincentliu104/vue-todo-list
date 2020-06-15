@@ -30,9 +30,12 @@
     <p>input v-model = v-bind + v-on($event.target.value)</p>
     <p>component v-model = v-bind + v-on($event)</p>
     <h3>Content Distribution with Slots</h3>
+    <p>把內容傳給 component，用 <a href="https://vuejs.org/v2/guide/components-slots.html">Slot</a>顯示</p>
     <alert-box>
       Something bad happened.
     </alert-box>
+    <h3>Dynamic Components</h3>
+    <p>v-bind:is + component 名稱或component’s options object</p>
   </div>
 </template>
 
