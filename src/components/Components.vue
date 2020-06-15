@@ -19,7 +19,7 @@
         v-bind:key="post.id"
         v-bind:post="post"
         v-bind:postFontSize="postFontSize"
-        v-on:enlarge-text="postFontSize += $event"
+        v-on:enlarge-text="onEnlargeText"
       ></BlogPost>
     </div>
   </div>
@@ -45,6 +45,13 @@ export default {
       ],
       postFontSize: 1,
     };
+  },
+  methods: {
+    onEnlargeText(enlargeAmount) {
+      console.log(`enlargeAmount: ${enlargeAmount}`);
+
+      this.postFontSize += enlargeAmount;
+    },
   },
 };
 </script>
