@@ -14,6 +14,8 @@
     <h3>Passing Data to Child Components with Props</h3>
     {{ title }}
     <h3>Listening to Child Components Events</h3>
+    <h4>Emitting a Value With an Event</h4>
+    <p>用 <a href="https://vuejs.org/v2/api/#vm-emit">$emit</a> 送出 event value</p>
     <div :style="{ fontSize: postFontSize + 'em' }">
       <BlogPost
         v-for="post in posts"
@@ -24,11 +26,19 @@
         v-on:reduce-text="onReduceText"
       ></BlogPost>
     </div>
+    <h4>Using v-model on Components</h4>
+    <p>input v-model = v-bind + v-on($event.target.value)</p>
+    <p>component v-model = v-bind + v-on($event)</p>
+    <h3>Content Distribution with Slots</h3>
+    <alert-box>
+      Something bad happened.
+    </alert-box>
   </div>
 </template>
 
 <script>
 import ButtonCounter from './button-counter.vue';
+import AlertBox from './alert-box.vue';
 import BlogPost from './blog-post.vue';
 
 export default {
@@ -37,6 +47,7 @@ export default {
   components: {
     ButtonCounter,
     BlogPost,
+    AlertBox,
   },
   data() {
     return {
