@@ -13,6 +13,7 @@
     <p>global or local</p>
     <h3>Passing Data to Child Components with Props</h3>
     {{ title }}
+    <h3>Listening to Child Components Events</h3>
     <div :style="{ fontSize: postFontSize + 'em' }">
       <BlogPost
         v-for="post in posts"
@@ -20,6 +21,7 @@
         v-bind:post="post"
         v-bind:postFontSize="postFontSize"
         v-on:enlarge-text="onEnlargeText"
+        v-on:reduce-text="onReduceText"
       ></BlogPost>
     </div>
   </div>
@@ -51,6 +53,11 @@ export default {
       console.log(`enlargeAmount: ${enlargeAmount}`);
 
       this.postFontSize += enlargeAmount;
+    },
+    onReduceText(reduceAmount) {
+      console.log(`reduceAmount: ${reduceAmount}`);
+
+      this.postFontSize -= reduceAmount;
     },
   },
 };
