@@ -1,7 +1,7 @@
 <template>
   <div id="class">
     <font color="red">{{ post.title }}</font>
-    <button v-on:click="$emit('enlarge-text')">
+    <button v-on:click="$emit('enlarge-text', 0.1)">
       Enlarge text
     </button>
     <div v-html="post.content"></div>

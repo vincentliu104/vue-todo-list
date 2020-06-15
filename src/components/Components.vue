@@ -19,7 +19,7 @@
         v-bind:key="post.id"
         v-bind:post="post"
         v-bind:postFontSize="postFontSize"
-        v-on:enlarge-text="postFontSize += 0.1"
+        v-on:enlarge-text="postFontSize += $event"
       ></BlogPost>
     </div>
   </div>
