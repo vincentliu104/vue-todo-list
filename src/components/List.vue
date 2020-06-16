@@ -26,7 +26,7 @@
     <p>$vm0.items.push({message: 'hello'});</p>
     <h3><a href="https://vuejs.org/v2/guide/list.html#Displaying-Filtered-Sorted-Results">Displaying Filtered/Sorted Results</a></h3>
     <li v-for="n in evenNumbers" :key="n">{{ n }}</li>
-    <ul v-for="set in sets" :key="set">
+    <ul v-for="set in sets" :key="set[0]">
       <li v-for="n in even(set)" :key="n">{{ n }}</li>
     </ul>
     <h3>v-for with a Range</h3>

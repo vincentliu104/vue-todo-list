@@ -22,7 +22,7 @@
     </div>
     <div v-bind:style="styleObject">v-bind:style - object</div>
     <h3>Array Syntax</h3>
-    <div v-bind:style="[baseStyles, overridingStyles]">array</div>
+    <p>todo</p>
     <h3>Auto-prefixing</h3>
     <p>todo</p>
     <h3>Multiple Values</h3>
