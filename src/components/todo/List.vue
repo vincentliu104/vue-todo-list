@@ -4,7 +4,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'TodoList',
+  computed: mapState({
+    products: (state) => state.todos,
+  }),
 };
 </script>

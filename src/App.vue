@@ -53,6 +53,9 @@ export default {
   //   FormInputBindings,
   //   Components,
   // },
+  props: {
+    logo: Boolean,
+  },
 };
 </script>
 
