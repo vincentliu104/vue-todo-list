@@ -7,7 +7,9 @@
       @keyup.enter="addTodo">
       <p>status: {{ doneTodosCount }} / {{ allTodosCount }}</p>
       <li v-for="(item, index) in todos" :key="index">
-        {{ item.title }} <button v-on:click="removeTodo(item)">remove</button>
+        {{ item.title }}
+        <button v-on:click="toggleTodo(item)">toggle</button>
+        <button v-on:click="removeTodo(item)">remove</button>
       </li>
   </div>
 </template>
@@ -49,6 +51,9 @@ export default {
         this.$store.dispatch('addTodo', text);
       }
       e.target.value = '';
+    },
+    toggleTodo(todo) {
+      this.$store.dispatch('toggleTodo', todo);
     },
     removeTodo(todo) {
       this.$store.dispatch('removeTodo', todo);
