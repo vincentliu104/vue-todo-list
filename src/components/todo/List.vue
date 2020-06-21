@@ -1,5 +1,10 @@
 <template>
   <div id="class">
+    <input class="new-todo"
+      autofocus
+      autocomplete="off"
+      placeholder="What needs to be done?"
+      @keyup.enter="addTodo">
   </div>
 </template>
 
@@ -32,5 +37,14 @@ export default {
   //   'todos',
   //   'count',
   // ]),
+  methods: {
+    addTodo(e) {
+      const text = e.target.value;
+      if (text.trim()) {
+        this.$store.dispatch('addTodo', text);
+      }
+      e.target.value = '';
+    },
+  },
 };
 </script>

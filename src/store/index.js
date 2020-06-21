@@ -17,8 +17,21 @@ export default new Vuex.Store({
     getTodoById: (state) => (id) => state.todos.find((todo) => todo.id === id),
   },
   mutations: {
+    addTodo(state, todo) {
+      console.log(todo);
+      state.todos.push(todo);
+    },
+    removeTodo(state, todo) {
+      state.todos.splice(state.todos.indexOf(todo), 1);
+    },
   },
   actions: {
+    addTodo({ commit }, text) {
+      commit('addTodo', {
+        text,
+        done: false,
+      });
+    },
   },
   modules: {
   },
