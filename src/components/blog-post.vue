@@ -1,6 +1,6 @@
 <template>
   <div id="class">
-    <font color="red">{{ post.title }}</font>
+    <font color="red">{{ post.title }} font size {{ postFontSize }}</font>
     <button v-on:click="$emit('enlarge-text', 0.2)">
       Enlarge text
     </button>
@@ -14,6 +14,6 @@
 <script>
 export default {
   name: 'BlogPost',
-  props: ['title', 'post'],
+  props: ['title', 'post', 'postFontSize'],
 };
 </script>
