@@ -55,7 +55,7 @@ export default new VueRouter({
       component: TodoList,
     },
     {
-      path: '/TodoItem',
+      path: '/TodoItem:id',
       component: TodoItem,
     },
   ],

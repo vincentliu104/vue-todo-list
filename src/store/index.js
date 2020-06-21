@@ -9,8 +9,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     todos: [
-      { title: 'do1', done: true },
-      { title: 'do1', done: false },
+      { id: Date.now(), title: 'do1', done: true },
+      { id: Date.now() + 1, title: 'do1', done: false },
     ],
     count: 2,
   },
