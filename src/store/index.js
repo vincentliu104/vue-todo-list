@@ -9,6 +9,7 @@ export default new Vuex.Store({
       { id: 1, title: 'do1', done: false },
       { id: 2, title: 'do1', done: false },
     ],
+    count: 2,
   },
   mutations: {
   },

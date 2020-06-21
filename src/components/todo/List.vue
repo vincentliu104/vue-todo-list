@@ -15,6 +15,7 @@ export default {
   // },
   computed: mapState({ // vuex binding
     todos: (state) => state.todos,
+    countAlias: 'count', // countAlias: (state) => state.count
   }),
 };
 </script>
