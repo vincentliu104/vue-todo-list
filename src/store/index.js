@@ -9,13 +9,14 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     todos: [
-      { id: 1, title: 'do1', done: true },
-      { id: 2, title: 'do1', done: false },
+      { title: 'do1', done: true },
+      { title: 'do1', done: false },
     ],
     count: 2,
   },
   getters: {
     doneTodos: (state) => state.todos.filter((todo) => todo.done),
+    allTodosCount: (state) => state.todos.length,
     doneTodosCount: (state, getters) => getters.doneTodos.length,
     getTodoById: (state) => (id) => state.todos.find((todo) => todo.id === id),
   },

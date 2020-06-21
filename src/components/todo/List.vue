@@ -5,6 +5,10 @@
       autocomplete="off"
       placeholder="What needs to be done?"
       @keyup.enter="addTodo">
+      <p>status: {{ doneTodosCount }} / {{ allTodosCount }}</p>
+      <li v-for="(item, index) in todos" :key="index">
+        {{ item.title }} <button v-on:click="removeTodo(item)">remove</button>
+      </li>
   </div>
 </template>
 
@@ -29,6 +33,7 @@ export default {
     countAlias: 'count', // countAlias: (state) => state.count
     ...mapGetters([
       'doneTodosCount',
+      'allTodosCount',
       // ...
     ]),
   }),
@@ -44,6 +49,9 @@ export default {
         this.$store.dispatch('addTodo', text);
       }
       e.target.value = '';
+    },
+    removeTodo(todo) {
+      this.$store.dispatch('removeTodo', todo);
     },
   },
 };
