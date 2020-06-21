@@ -8,11 +8,12 @@
       <p>status: {{ doneTodosCount }} / {{ allTodosCount }}</p>
       <li v-for="(item, index) in todos" :key="index">
         <span v-if="item.done">
-          <del>{{ item.title }}</del>
+          <del><a :href="'/todoItem/' + item.id">{{ item.title }}</a> </del>
         </span>
         <span v-else>
           {{ item.title }}
         </span>
+        <button v-on:click="gotoTodo(item)">goto</button>
         <button v-on:click="toggleTodo(item)">toggle</button>
         <button v-on:click="removeTodo(item)">remove</button>
       </li>
@@ -56,6 +57,9 @@ export default {
         this.$store.dispatch('addTodo', text);
       }
       e.target.value = '';
+    },
+    gotoTodo(todo) {
+      this.$router.push({ path: `/todoItem/${todo.id}` });
     },
     toggleTodo(todo) {
       this.$store.dispatch('toggleTodo', todo);

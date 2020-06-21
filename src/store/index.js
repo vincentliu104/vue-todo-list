@@ -9,8 +9,10 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     todos: [
-      { id: Date.now(), title: 'do1', done: true },
-      { id: Date.now() + 1, title: 'do1', done: false },
+      { id: Date.now(), title: '包粽子', done: false },
+      { id: Date.now() + 1, title: '喝雄黃', done: false },
+      { id: Date.now() + 2, title: '划龍舟', done: false },
+      { id: Date.now() + 3, title: '掛艾草', done: false },
     ],
     count: 2,
   },
@@ -18,7 +20,7 @@ export default new Vuex.Store({
     doneTodos: (state) => state.todos.filter((todo) => todo.done),
     allTodosCount: (state) => state.todos.length,
     doneTodosCount: (state, getters) => getters.doneTodos.length,
-    getTodoById: (state) => (id) => state.todos.find((todo) => todo.id === id),
+    getTodoById: (state) => (id) => state.todos.find((todo) => String(todo.id) === String(id)),
   },
   mutations,
   actions,
