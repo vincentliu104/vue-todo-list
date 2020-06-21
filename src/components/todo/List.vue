@@ -7,7 +7,12 @@
       @keyup.enter="addTodo">
       <p>status: {{ doneTodosCount }} / {{ allTodosCount }}</p>
       <li v-for="(item, index) in todos" :key="index">
-        {{ item.title }}
+        <span v-if="item.done">
+          <del>{{ item.title }}</del>
+        </span>
+        <span v-else>
+          {{ item.title }}
+        </span>
         <button v-on:click="toggleTodo(item)">toggle</button>
         <button v-on:click="removeTodo(item)">remove</button>
       </li>
