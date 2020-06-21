@@ -4,12 +4,13 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
 
 export default {
   name: 'TodoList',
-  computed: mapState({
-    products: (state) => state.todos,
-  }),
+  computed: {
+    todos() {
+      return this.$store.state.todos;
+    },
+  },
 };
 </script>
