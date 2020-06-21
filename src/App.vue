@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <ul>
+      <li><router-link to="/TodoList">Let's Do it</router-link></li>
+      <li><router-link to="/TodoItem">Let's Do it</router-link></li>
       <li><router-link to="/HelloWorld">HelloWorld</router-link></li>
       <li><router-link to="/Template">Template</router-link></li>
       <li><router-link to="/ComputedProperties">ComputedProperties</router-link></li>
@@ -22,6 +23,7 @@
     <EventHandling />
     <FormInputBindings />
     <Components title="My Component" /> -->
+    <img alt="don logo" src="./assets/logo.png">
   </div>
 </template>
 

@@ -8,6 +8,8 @@ import List from '../components/List.vue';
 import EventHandling from '../components/EventHandling.vue';
 import FormInputBindings from '../components/FormInputBindings.vue';
 import Components from '../components/Components.vue';
+import TodoList from '../components/todo/List.vue';
+import TodoItem from '../components/todo/Item.vue';
 
 export default new VueRouter({
   mode: 'history',
@@ -47,6 +49,14 @@ export default new VueRouter({
     {
       path: '/Components',
       component: Components,
+    },
+    {
+      path: '/TodoList',
+      component: TodoList,
+    },
+    {
+      path: '/TodoItem',
+      component: TodoItem,
     },
   ],
 });
