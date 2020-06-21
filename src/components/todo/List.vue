@@ -13,9 +13,14 @@ export default {
   //     return this.$store.state.todos;
   //   },
   // },
-  computed: mapState({ // vuex binding
-    todos: (state) => state.todos,
-    countAlias: 'count', // countAlias: (state) => state.count
-  }),
+  // computed: mapState({ // vuex binding
+  //   todos: (state) => state.todos,
+  //   countAlias: 'count', // countAlias: (state) => state.count
+  // }),
+  computed: mapState([
+  // 映射 this.count 为 store.state.count
+    'todos',
+    'count',
+  ]),
 };
 </script>
