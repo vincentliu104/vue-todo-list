@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 
 import actions from './actions';
+import mutations from './mutations';
 
 Vue.use(Vuex);
 
@@ -18,15 +19,7 @@ export default new Vuex.Store({
     doneTodosCount: (state, getters) => getters.doneTodos.length,
     getTodoById: (state) => (id) => state.todos.find((todo) => todo.id === id),
   },
-  mutations: {
-    addTodo(state, todo) {
-      console.log(todo);
-      state.todos.push(todo);
-    },
-    removeTodo(state, todo) {
-      state.todos.splice(state.todos.indexOf(todo), 1);
-    },
-  },
+  mutations,
   actions,
   modules: {
   },
