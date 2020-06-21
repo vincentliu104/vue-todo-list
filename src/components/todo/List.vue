@@ -15,6 +15,9 @@ export default {
     doneTodosCount() {
       return this.$store.getters.doneTodosCount;
     },
+    no1() {
+      return this.$store.getters.getTodoById(1);
+    },
   },
   // computed: mapState({ // vuex binding
   //   todos: (state) => state.todos,
