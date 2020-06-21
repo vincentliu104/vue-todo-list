@@ -14,7 +14,7 @@ const data = { a: 'this is an apple' };
 // Vue Instance
 const vm = new Vue({
   // options https://vuejs.org/v2/api/#Options-Data
-  store,
+  store, // for all sub component
   render: (h) => h(App),
   data,
   router,
